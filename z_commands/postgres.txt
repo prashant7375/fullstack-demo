@@ -1,0 +1,37 @@
+Postgres commands
+
+
+psql --version
+
+
+// postgres restart commands
+sudo service postgresql start
+or
+sudo systemctl restart postgresql (for newer systems)
+
+// To check the databases installed: 
+\l
+
+// To exit: 
+\q
+
+// To go into a Db 
+/c workflow_ps
+
+
+// To see all the tables 
+\dt
+
+// create table 
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    age INT,
+    city VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+// Copy CSV data to postgres table
+\copy artists FROM '/workspaces/fullstack-demo/data/artists.csv' DELIMITER ',' CSV HEADER;
