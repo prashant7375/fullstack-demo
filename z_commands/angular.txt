@@ -1,0 +1,7 @@
+Angular project commands
+
+
+Command to run the project:
+
+ng serve --host 0.0.0.0 --port 4200
+
