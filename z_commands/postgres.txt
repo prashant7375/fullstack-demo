@@ -9,6 +9,10 @@ sudo service postgresql start
 or
 sudo systemctl restart postgresql (for newer systems)
 
+sudo su
+
+sudo -u postgres psql
+
 // To check the databases installed: 
 \l
 
